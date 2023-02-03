@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Temperature Converter{% endblock title %}
+{% block head %}
+    <style>
+        .input-group{
+            margin-top: 60px;
+        }.output{
+            margin-top: 34px:
+        }.form-control-two{
+            padding-right: 1028px;
+        }
+    </style>
+
+
+{% endblock head %}
+{% block body %}
+<form method= "POST">
+    <div class="input-group">
+        <input type="number" name = "celsius" value= "celsius_" class="form-control" placeholder="Temperature in Celsius" aria-label="Temperature in Celsius">
+        <button class="btn btn-outline-primary" type="submit">Convert to Fahrenheit</button>
+    </div><br><br>
+    <div>
+        <b>
+            <strong><h3>
+                <p class "output">Temperature in Fahrenheit: {{fahrenheit}} </p>
+            </h3></strong>
+        </b>
+    </div>
+    <div class="input-group">
+        <input type="number" name= "fahrenheit" class="form-control" placeholder="Temperature in Fahrenheit" aria-label="Temperature in Fahrenheit">
+        <button class="btn btn-outline-primary" type="submit" >Convert to Celsius </button>
+    </div><br><br>
+    <div>
+        <b>
+            <strong><h3>
+                <p class "output">Temperature in Celsius: {{celsius}} CELSIUS</p>
+            </h3></strong>
+        </b>
+    </div>
+</form>
+
+{% endblock body %}
